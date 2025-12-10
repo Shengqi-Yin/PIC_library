@@ -1,0 +1,37 @@
+basic
+    |-spirals (archimedean-shape)
+    |-tapers (hyperbola taper, SM2SM taper)
+    |-waveguides (straight, Crossing)
+
+coupler
+    |-grating_couplers
+    |-directional_couplers
+    |-edge_couplers
+
+filters
+    |-MMIs
+    |-MZIs
+    |-RRs
+    |-AWGs
+    |-PBS
+    |-PBRS
+
+functions:
+    |-env (setup the basic env requirement and fundamental function could be used in further design)
+    |-path_spiral (archimedean-path)
+    |-pts_grating_coupler (points array of grating coupler tooths and waveguides)
+
+groups:
+    |-utilities ()
+    |-containers()
+
+pdk:
+    |-CORNERSTONE (layer usage and cross-section)
+    |-SOI220
+    |-SOI340
+    |-SOI500
+    |-SiN300
+    |-SiN200
+    |-sus_Si
+    |-Ge_on_Si
+    |-LiNbO3

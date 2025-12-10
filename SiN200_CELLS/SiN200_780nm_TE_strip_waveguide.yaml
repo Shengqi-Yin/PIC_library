@@ -1,0 +1,28 @@
+name: SiN200_780nm_TE_strip_waveguide
+ports:
+- name: o1
+  port_type: optical
+  center:
+  - 0.0
+  - 0.0
+  orientation: 180.0
+  cross_section: strip_780nm_TE
+  modes:
+  - mode_numbers:
+    - 0
+    - 0
+    polarisations: TE
+    wavelength: 780
+- name: o2
+  port_type: optical
+  center:
+  - 100.0
+  - 0.0
+  orientation: 0.0
+  cross_section: strip_780nm_TE
+  modes:
+  - mode_numbers:
+    - 0
+    - 0
+    polarisations: TE
+    wavelength: 780
