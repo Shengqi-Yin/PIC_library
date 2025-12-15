@@ -1,0 +1,47 @@
+name: SOI220_oband_TE_rib_MZM
+ports:
+- name: e1
+  port_type: pad_rf
+  center:
+  - 1871.8
+  - 331.975
+  orientation: 90.0
+- name: e2
+  port_type: pad_rf
+  center:
+  - -118.2
+  - -417.025
+  orientation: 270.0
+- name: vertical_1
+  port_type: vertical_te
+  center:
+  - 2207.353
+  - -193.025
+  orientation: 0.0
+  width: 10.0
+  coupling_angle_cladding: null
+  fibre_modes:
+  - fibre_type: null
+    wavelength: 1310
+- name: vertical_2
+  port_type: vertical_te
+  center:
+  - -453.753
+  - 163.025
+  orientation: 180.0
+  width: 10.0
+  coupling_angle_cladding: null
+  fibre_modes:
+  - fibre_type: null
+    wavelength: 1310
+- name: vertical_3
+  port_type: vertical_te
+  center:
+  - -453.753
+  - 113.025
+  orientation: 180.0
+  width: 10.0
+  coupling_angle_cladding: null
+  fibre_modes:
+  - fibre_type: null
+    wavelength: 1310

@@ -1,0 +1,38 @@
+name: SOI220_oband_TE_rib_Defect_Detector
+ports:
+- name: e1
+  port_type: electrical_dc
+  center:
+  - -205.0
+  - -137.0
+  orientation: 270.0
+  cross_section: dc
+- name: e2
+  port_type: electrical_dc
+  center:
+  - -55.0
+  - -137.0
+  orientation: 270.0
+  cross_section: dc
+- name: vertical_1
+  port_type: vertical_te
+  center:
+  - -710.367
+  - 0.0
+  orientation: 180.0
+  width: 10.0
+  coupling_angle_cladding: null
+  fibre_modes:
+  - fibre_type: null
+    wavelength: 1310
+- name: vertical_2
+  port_type: vertical_te
+  center:
+  - 1960.367
+  - 0.0
+  orientation: 0.0
+  width: 10.0
+  coupling_angle_cladding: null
+  fibre_modes:
+  - fibre_type: null
+    wavelength: 1310
