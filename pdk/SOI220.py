@@ -60,8 +60,17 @@ def SOI220_cband_TE_strip_GC()->Component:
     c.info["component_type"], c.info["fiber_type"], c.info["coupling_angle_cladding"] = "GratingCoupler1D", "SMF28",6.9
     return c
 
+@gf.cell(tags=["SOI220","Apodized","v1p0"])
+def SOI220_cband_TE_strip_apodized_GC_focusing_v1p0(**kwargs)->Component:
+    pos=[0, 0.731, 1.402, 2.097, 3.097, 3.735, 4.411, 5.017, 5.567, 6.717, 7.394, 7.986, 8.605, 9.223, 9.822, 10.446, 11.05, 11.647, 12.258, 12.869, 13.48, 14.087, 14.693, 15.313, 15.908, 16.513, 17.115, 17.771, 18.491, 19.248, 20.01, 20.779, 21.554, 22.34, 23.139, 23.961, 24.803, 25.66, 26.525, 27.396, 28.273, 29.157, 30.049, 30.954, 31.874, 32.81, 33.763, 34.731, 35.713, 36.711]
+    tooth=[0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.335, 0.312, 0.2, 0.254, 0.246, 0.231, 0.25, 0.226, 0.231, 0.245, 0.246, 0.244, 0.24, 0.236, 0.238, 0.226, 0.24, 0.237, 0.291, 0.338, 0.37, 0.378, 0.389, 0.399, 0.411, 0.424, 0.441, 0.458, 0.473, 0.484, 0.495, 0.505, 0.516, 0.527, 0.54, 0.555, 0.571, 0.587, 0.602, 0.617, 0.632, 0.647]
+    c = grating_coupler_array(ap=10, bp=10, taper_angle=28, offset=25, backend=5, xsection=strip_c,
+                              tooth=tooth, pos=pos, layer=[layers["WGP"], layers["GRA"]], hyperbola=1,**kwargs).copy().mirror_x()
+    c.info["component_type"], c.info["fiber_type"], c.info["coupling_angle_cladding"] = "GratingCoupler1D", "SMF28", 6.9
+    return c
+
 @gf.cell(check_ports=False)
-def SOI220_cband_TE_strip_AGC_focusing(**kwargs)->Component:
+def SOI220_cband_TE_strip_apodized_GC_focusing_ebl(**kwargs)->Component:
     tooth =[0.06,0.071,0.082,0.092,0.103,0.113,0.124,0.135,0.146,0.158,0.169,0.18,0.192,0.203,0.215,0.227,0.239,0.25,0.262,0.275,0.288,0.3,0.313,0.325]
     pos = [0, 0.607, 1.217, 1.829, 2.442, 3.057, 3.674, 4.293, 4.914, 5.537, 6.162, 6.789, 7.418, 8.049, 8.682, 9.317, 9.954, 10.594, 11.236, 11.879, 12.525, 13.174, 13.824, 14.477]
     c =  grating_coupler_array(ap=18.4,bp=18.4,taper_angle=38,offset = 17.7, backend=10.315,xsection=strip_c,
@@ -213,6 +222,6 @@ def SOI220_Half_Institution()->Component:
 if __name__ == "__main__":
     gf.clear_cache()
     c = gf.Component("SOI220_Platform_Components")
-    c <<SOI220_cband_TE_rib_MZI()
+    c <<SOI220_cband_TE_strip_apodized_GC_focusing_v1p0().copy()
     # print(SOI_Full_Institution().ports)
     c.show()

@@ -344,17 +344,17 @@ def grating_coupler_array(
 def GC_std(**kwargs)->Component:
     xsection = kwargs.pop("xsection", None)
     return grating_coupler_array(lp=10,xsection = xsection,xp=0,inner = 10,backend=10,pitch=0.63,duty_cycle=0.5,
-                                 taper_length=200,**kwargs).mirror_x()
+                                 taper_length=200,**kwargs).copy().mirror_x()
 def GC_rib(**kwargs)->Component:
     xsection = kwargs.pop("xsection", rib_c)
     return grating_coupler_array(lp=10,xsection = xsection,xp=0,inner = 10,backend=10,pitch=0.63,duty_cycle=0.5,
-                                 taper_length=200,**kwargs).mirror_x()
+                                 taper_length=200,**kwargs).copy().mirror_x()
 def GC_foc(**kwargs)->Component:
     xsection = kwargs.pop("xsection", None)
     return grating_coupler_array(ap=10,bp=10,inner=15,taper_angle=28,backend=10,pitch=0.63,duty_cycle=0.5,
-                                 xsection=xsection,**kwargs).mirror_x()
+                                 xsection=xsection,**kwargs).copy().mirror_x()
 ##################################################
-if __name__=="__main__":
+if __name__ == "__main__":
     gf.clear_cache()
     c = gf.Component("grating coupler")
     c << GC_foc()

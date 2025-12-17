@@ -260,8 +260,8 @@ def packaging_lib_and_comps(dir_path:str|None = None,
 
 ##### ==== main panel ==== ##
 if __name__ == "__main__":
-    # packaging_lib_and_comps(cell_lib=SOI220_lib, save_lib_name="SOI220_library_template",save_folder_name="SOI220_CELLS")
-    # packaging_lib_and_comps(cell_lib=SOI220active_lib, save_lib_name="SOI220active_library_template",save_folder_name="SOI220active_CELLS")
+    packaging_lib_and_comps(cell_lib=SOI220_lib, save_lib_name="SOI220_library_template",save_folder_name="SOI220_CELLS")
+    packaging_lib_and_comps(cell_lib=SOI220active_lib, save_lib_name="SOI220active_library_template",save_folder_name="SOI220active_CELLS")
     # packaging_lib_and_comps(cell_lib=SOI340_lib, save_lib_name="SOI340_library_template",save_folder_name="SOI340_CELLS")
     # packaging_lib_and_comps(cell_lib=SOI500_lib, save_lib_name="SOI500_library_template",save_folder_name="SOI500_CELLS")
     # packaging_lib_and_comps(cell_lib=SiN300_lib, save_lib_name="SiN300_library_template",save_folder_name="SiN300_CELLS")

@@ -1,12 +1,12 @@
-name: SOI220_cband_TE_strip_AGC_focusing
+name: SOI220_cband_TE_strip_apodized_GC_focusing_v1p0
 ports:
 - name: vertical_1
   port_type: vertical_te
   center:
-  - -17.747
+  - -24.098
   - 0.0
   orientation: 180.0
-  width: 12.19
+  width: 12.466
   coupling_angle_cladding: 6.9
   fibre_modes:
   - fibre_type: SMF28

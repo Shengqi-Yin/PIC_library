@@ -24,10 +24,12 @@ functions:
 groups:
     |-utilities ()
     |-containers()
+    |-dies
 
 pdk:
     |-CORNERSTONE (layer usage and cross-section)
     |-SOI220
+    |-SOI220active
     |-SOI340
     |-SOI500
     |-SiN300

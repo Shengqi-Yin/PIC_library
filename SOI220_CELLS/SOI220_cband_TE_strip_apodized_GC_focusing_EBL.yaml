@@ -1,4 +1,4 @@
-name: SOI220_cband_TE_strip_AGC_focusing
+name: SOI220_cband_TE_strip_apodized_GC_focusing_EBL
 ports:
 - name: vertical_1
   port_type: vertical_te
